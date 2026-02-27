@@ -205,7 +205,7 @@ const furnitureData = {
     ],
 
     Standard: [
-      {name:"Standard Entertainment System 1", price:650, img: "/Standard_entertainment1.png",
+      {name:"Standard Entertainment System 1", price:650, img: "Standard_entertainment1.png",
         flippedImg: "Standard_entertainment1-f.png",
         rearImg: "Standard_entertainment1.png",
         rearImgF: "Standard_entertainment1-f.png",
@@ -324,24 +324,24 @@ const furnitureData = {
 
   rugs: {
     Basic: [
-      {name:"Basic Rug 1", price:150, img:"Carpet/basic_carpet1.png",
-      flippedImg: "Carpet/basic_carpet1.png",
-      rearImg: "Carpet/basic_carpet1.png",
-      rearImgF: "Carpet/basic_carpet1.png",
+      {name:"Basic Rug 1", price:150, img:"basic_carpet1.png",
+      flippedImg: "basic_carpet1.png",
+      rearImg: "basic_carpet1.png",
+      rearImgF: "basic_carpet1.png",
       width:300
       },
 
-      {name:"Basic Rug 2", price:150, img:"Carpet/basic_carpet2.png",
-      flippedImg: "Carpet/basic_carpet2-f.png",
-      rearImg: "Carpet/basic_carpet2.png",
-      rearImgF: "Carpet/basic_carpet2-f.png",
+      {name:"Basic Rug 2", price:150, img:"basic_carpet2.png",
+      flippedImg: "basic_carpet2-f.png",
+      rearImg: "basic_carpet2.png",
+      rearImgF: "basic_carpet2-f.png",
       width:300        
       },
 
-      {name:"Basic Rug 3", price:150, img:"Carpet/basic_carpet3.png",
-      flippedImg: "Carpet/basic_carpet3-f.png",
-      rearImg: "Carpet/basic_carpet3.png",
-      rearImgF: "Carpet/basic_carpet3-f.png",
+      {name:"Basic Rug 3", price:150, img:"basic_carpet3.png",
+      flippedImg: "basic_carpet3-f.png",
+      rearImg: "basic_carpet3.png",
+      rearImgF: "basic_carpet3-f.png",
       width:300 
 
       }
