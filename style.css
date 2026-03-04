@@ -11,15 +11,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: #f4f6f8;
   overflow-x: hidden; /* prevent horizontal scrolling */
+  height: 100vh;
 }
 
 /* =================================================
    MAIN LAYOUT
 ================================================= */
 .gameLayout {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 /* ================= TOP BAR ================= */
@@ -31,20 +32,22 @@ body {
   font-weight: bold;
 
   display: flex;
-  justify-content: space-between; /* title left, buttons right */
+  justify-content: space-between; /* budget left, buttons right */
   align-items: center;
+  gap: 10px;
 }
 
+/* Buttons in top bar */
 .topBar button {
   width: 150px;
   font-size: 1rem;
   font-weight: bold;
+  background: linear-gradient(45deg, #36d1dc, #5b86e5);
+  color: white;
   border: none;
   border-radius: 8px;
   padding: 8px;
   cursor: pointer;
-  color: white;
-  background: linear-gradient(45deg, #36d1dc, #5b86e5);
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   transition: transform 0.2s;
 }
@@ -53,17 +56,16 @@ body {
   transform: scale(1.05);
 }
 
-/* ================= SPLIT SCREEN ================= */
+/* ================= MAIN AREA ================= */
 .mainArea {
   flex: 1;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 0;
-  overflow: hidden;
+  overflow: hidden; /* prevent scroll */
 }
 
 /* =================================================
-   ROOM AREA
+   ROOM SECTION
 ================================================= */
 .roomSection {
   display: flex;
@@ -88,9 +90,7 @@ body {
   user-select: none;
 }
 
-/* =================================================
-   FURNITURE ITEMS (DRAGGABLE)
-================================================= */
+/* FURNITURE ITEMS (DRAGGABLE) */
 #roomCanvas img:not(#roomImage) {
   position: absolute;
   cursor: grab;
@@ -112,8 +112,8 @@ body {
   padding: 20px;
   overflow-y: auto;
   height: 100%;
-  box-sizing: border-box;
-  padding-bottom: 120px; /* prevent items from hiding under bottom buttons */
+  display: flex;
+  flex-direction: column;
 }
 
 .shopSection h2 {
@@ -144,14 +144,13 @@ body {
   background: #2563eb;
 }
 
-/* =================================================
-   ITEM OPTIONS
-================================================= */
+/* ITEM OPTIONS */
 #itemOptions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  margin-bottom: 15px;
 }
 
 .tierViewer {
@@ -194,28 +193,28 @@ body {
 }
 
 /* =================================================
-   CONTROLS (Reset + Back to Dice)
+   CONTROLS (Change View / Finish Room)
 ================================================= */
 .controls {
   display: flex;
-  flex-direction: row;      /* side by side */
-  justify-content: center;  /* center horizontally */
-  align-items: center;
+  flex-direction: row;
+  justify-content: center; /* center horizontally */
   gap: 10px;
-  margin-top: 20px;
+  margin-top: auto; /* pushes controls to bottom of shopSection */
+  padding-bottom: 10px;
 }
 
 .controls button {
-  flex: 0 0 150px;          /* fixed width */
+  flex: 0 0 150px; /* fixed width for both buttons */
   padding: 12px;
   font-size: 16px;
   font-weight: bold;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  color: white;
   background: linear-gradient(45deg, #36d1dc, #5b86e5);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   transition: transform 0.2s;
 }
 
@@ -224,7 +223,7 @@ body {
 }
 
 /* =================================================
-   BOTTOM CONTROLS (Always visible)
+   BOTTOM CONTROLS (if needed)
 ================================================= */
 .bottomControls {
   position: fixed;
@@ -245,16 +244,14 @@ body {
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: transform 0.2s;
 }
 
 .bottomControls button:hover {
   background: #059669;
-  transform: scale(1.05);
 }
 
 /* =================================================
-   START SCREEN
+   START SCREEN (if used)
 ================================================= */
 body.start-screen {
   display: flex;
@@ -266,41 +263,8 @@ body.start-screen {
   font-size: 24px;
 }
 
-body.start-screen .controls {
+.start-screen .controls {
   flex-direction: row;
+  justify-content: center;
   gap: 10px;
-}
-
-body.start-screen .controls button {
-  flex: 0 0 150px;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  color: white;
-  background: linear-gradient(45deg, #36d1dc, #5b86e5);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-  transition: transform 0.2s;
-}
-
-body.start-screen .controls button:hover {
-  transform: scale(1.05);
-}
-
-/* =================================================
-   RESPONSIVE FIXES
-================================================= */
-@media (max-width: 1024px) {
-  .mainArea {
-    grid-template-columns: 1fr; /* single column for smaller screens */
-  }
-
-  .shopSection {
-    height: 50vh;
-    border-left: none;
-    border-top: 3px solid #ddd;
-    padding-bottom: 80px;
-  }
 }
