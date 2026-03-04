@@ -24,10 +24,13 @@ body {
 .topBar {
   background: #222;
   color: white;
-  text-align: center;
   padding: 15px;
   font-size: 22px;
   font-weight: bold;
+
+  display: flex;
+  justify-content: space-between; /* title left, buttons right */
+  align-items: center;
 }
 
 #resetBtn {
@@ -261,8 +264,10 @@ body.start-screen {
   cursor: pointer;
 }
 
-.controls button:hover {
-  background: #059669;
+.controls {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 .topBar button {
