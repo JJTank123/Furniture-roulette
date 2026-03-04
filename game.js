@@ -471,53 +471,59 @@ function updateBudgetDisplay() {
 //make draggable
 function makeDraggable(element) {
 
-  element.onmousedown = function(e) {
-    e.preventDefault();
+  // --------- MOUSE EVENTS ---------
+  element.onmousedown = startDrag;
+  element.ondragstart = () => false;
 
+  // --------- TOUCH EVENTS ---------
+  element.ontouchstart = startDrag;
+
+  function startDrag(e) {
+    e.preventDefault();
     selectedFurniture = element;
     showSelectionOutline(element);
-
     element.style.cursor = "grabbing";
 
     const type = element.dataset.type;
-    element.style.zIndex = 1000; // bring to front while dragging
+    element.style.zIndex = 1000;
 
     const rect = element.getBoundingClientRect();
     const canvasRect = roomCanvas.getBoundingClientRect();
 
-    let shiftX = e.clientX - rect.left;
-    let shiftY = e.clientY - rect.top;
+    // Determine initial touch/mouse position
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+    let shiftX = clientX - rect.left;
+    let shiftY = clientY - rect.top;
 
     function moveAt(pageX, pageY) {
-      element.style.left =
-        pageX - shiftX - canvasRect.left + "px";
-
-      element.style.top =
-        pageY - shiftY - canvasRect.top + "px";
+      element.style.left = pageX - shiftX - canvasRect.left + "px";
+      element.style.top = pageY - shiftY - canvasRect.top + "px";
     }
 
-    function onMouseMove(e) {
-      moveAt(e.clientX, e.clientY);
+    function onMove(event) {
+      const moveX = event.touches ? event.touches[0].clientX : event.clientX;
+      const moveY = event.touches ? event.touches[0].clientY : event.clientY;
+      moveAt(moveX, moveY);
     }
-
-    // ✅ listen globally
-    document.addEventListener("mousemove", onMouseMove);
 
     function stopDrag() {
-      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mousemove", onMove);
       document.removeEventListener("mouseup", stopDrag);
+      document.removeEventListener("touchmove", onMove);
+      document.removeEventListener("touchend", stopDrag);
 
       element.style.cursor = "grab";
-
-      // restore correct layer
       element.style.zIndex = layerOrder[type];
     }
 
-    // ✅ mouseup MUST be on document
+    // Add listeners for both mouse and touch
+    document.addEventListener("mousemove", onMove);
     document.addEventListener("mouseup", stopDrag);
-  };
-
-  element.ondragstart = () => false;
+    document.addEventListener("touchmove", onMove, { passive: false });
+    document.addEventListener("touchend", stopDrag);
+  }
 }
 
 // Highlight selected furniture with auto-remove after 5s
