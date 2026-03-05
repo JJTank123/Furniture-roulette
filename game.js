@@ -705,6 +705,37 @@ window.addEventListener("resize", adjustLayoutForOrientation);
 window.addEventListener("orientationchange", adjustLayoutForOrientation);
 adjustLayoutForOrientation(); // run on load
 
+
+document.getElementById("resetRoom").addEventListener("click",resetRoom);
+
+function resetRoom() {
+  localStorage.setItem("gameBudget", budget);
+
+  // Remove only furniture, NOT room background
+  document.querySelectorAll("#roomCanvas img:not(#roomImage)")
+    .forEach(img => img.remove());
+
+  selectedItems = {
+    couch: null,
+    table: null,
+    Lighting: null,
+    paintings: null,
+    entertainment: null,
+    rugs: null
+  };
+
+  selectedFurniture = null;
+
+  tierIndexes = {
+    Basic: 0,
+    Standard: 0,
+    Luxury: 0
+  };
+
+  updateBudgetDisplay();
+  itemOptions.innerHTML = "";
+}
+
 function backtoDice() {
   localStorage.removeItem("budget");
 
@@ -712,3 +743,4 @@ function backtoDice() {
 
   window.location.href = "dice.html";
 }
+
