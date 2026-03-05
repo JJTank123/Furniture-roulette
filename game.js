@@ -300,23 +300,23 @@ const furnitureData = {
     ],
 
     Luxury: [
-      {name:"Luxury Lighting 1", price:500, img:"lighting1.png",
-      flippedImg: "lighting1-f.png",
-      rearImg: "lighting1.png",
-      rearImgF: "lighting1-f.png",
+      {name:"Luxury Lighting 1", price:500, img:"luxury_lighting1.png",
+      flippedImg: "luxury_lighting1-f.png",
+      rearImg: "luxury_lighting1.png",
+      rearImgF: "luxury_lighting1-f.png",
       width:150
       },
-      {name:"Luxury Lighting 2", price:500, img:"lighting2.png",
-      flippedImg: "lighting2.png",
-      rearImg: "lighting2.png",
-      rearImgF: "lighting2.png",
+      {name:"Luxury Lighting 2", price:500, img:"luxury_lighting2.png",
+      flippedImg: "luxury_lighting2.png",
+      rearImg: "luxury_lighting2.png",
+      rearImgF: "luxury_lighting2.png",
       width:150
       },
 
-      {name:"Luxury Lighting 3", price:500, img:"lighting3.png",
-      flippedImg: "lighting3.png",
-      rearImg: "lighting3.png",
-      rearImgF: "lighting3.png",
+      {name:"Luxury Lighting 3", price:500, img:"luxury_lighting3.png",
+      flippedImg: "lluxury_ighting3.png",
+      rearImg: "luxury_lighting3.png",
+      rearImgF: "luxury_lighting3.png",
       width:150
       }
     ]
