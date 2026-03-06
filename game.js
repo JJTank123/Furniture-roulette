@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
     table: 1,
     couch: 2,
     entertainment: 3,
-    Lighting: 4,
+    lighting: 4,
     paintings: 5
   };
 
   let selectedItems = {
     couch: null,
     table: null,
-    Lighting: null,
+    lighting: null,
     paintings: null,
     entertainment: null,
     rugs: null
@@ -614,7 +614,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const anchors = {
       couch: { top: '300px', left: '100px' },
       table: { top: '250px', left: '100px' },
-      Lighting: { top: '200px', left: '100px' },
+      lighting: { top: '200px', left: '100px' },
       entertainment: {top: '100px', left:'100px'},
       rugs: {top:'300px', left:'100px'},
       paintings: {top:'300px',left:'100px'}
