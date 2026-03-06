@@ -631,9 +631,12 @@ changeViewBtn.addEventListener('click', () => {
   showSelectionOutline(selectedFurniture);
 });
 
-// Finish room button
-document.getElementById('finishRoom').addEventListener('click', () => {
-  alert(`Room complete! Remaining budget: $${budget}`);
+finishBtn.addEventListener("click", () => {
+  if (budget >= 0) {
+    alert("✅ You stayed within budget! Drawer unlocked! Your code is 200");
+  } else {
+    alert("❌ Over Budget! Try Again");
+  }
 });
 
 // Initialize budget
@@ -708,33 +711,18 @@ adjustLayoutForOrientation(); // run on load
 
 document.getElementById("resetRoom").addEventListener("click",resetRoom);
 
-function resetRoom() {
-  localStorage.setItem("gameBudget", budget);
-
-  // Remove only furniture, NOT room background
-  document.querySelectorAll("#roomCanvas img:not(#roomImage)")
-    .forEach(img => img.remove());
-
-  selectedItems = {
-    couch: null,
-    table: null,
-    Lighting: null,
-    paintings: null,
-    entertainment: null,
-    rugs: null
-  };
-
-  selectedFurniture = null;
-
-  tierIndexes = {
-    Basic: 0,
-    Standard: 0,
-    Luxury: 0
-  };
-
+resetBtn.addEventListener("click", () => {
+  budget = parseInt(localStorage.getItem("gameBudget")) || 1000;
   updateBudgetDisplay();
+
+  // Only remove furniture images
+  document.querySelectorAll("#roomCanvas img.furniture").forEach(img => img.remove());
+
+  selectedItems = { couch:null, table:null, lighting:null, paintings:null, entertainment:null, rugs:null };
+  selectedFurniture = null;
+  tierIndexes = { Basic:0, Standard:0, Luxury:0 };
   itemOptions.innerHTML = "";
-}
+});
 
 function backtoDice() {
   localStorage.removeItem("budget");
