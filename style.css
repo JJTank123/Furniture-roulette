@@ -356,6 +356,10 @@ body.start-screen {
   transform: scale(1.1);
 }
 
+.locked {
+  color: yellow;
+}
+
 
 
 
