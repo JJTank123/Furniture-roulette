@@ -176,7 +176,7 @@ Luxury: [
     flippedImg: "luxury_lighting3.png",
     rearImg: "luxury_lighting3.png",
     rearImgF: "luxury_lighting3.png",
-    width:150
+    width:200
   }
 ]
 
