@@ -157,28 +157,28 @@ document.addEventListener("DOMContentLoaded", () => {
         width: 200
       },
     ],
+    Luxury: [
+      {name:"Standard Table 1", price: 750, img:"Luxury/Table/luxury_table1.png",
+        flippedImg: "Luxury/Table/luxury_table1-f.png",
+        rearImg:"Luxury/Table/luxury_table1.png",
+        rearImgF:"Luxury/Table/luxury_table1-f.png",
+        width: 200
+      },
 
-Luxury: [
-  {name:"Luxury Lighting 1", price:500, img:"luxury_lighting1.png",
-    flippedImg: "luxury_lighting1-f.png",
-    rearImg: "luxury_lighting1.png",
-    rearImgF: "luxury_lighting1-f.png",
-    width:150
-  },
-  {name:"Luxury Lighting 2", price:500, img:"luxury_lighting2.png",
-    flippedImg: "luxury_lighting2.png",
-    rearImg: "luxury_lighting2.png",
-    rearImgF: "luxury_lighting2.png",
-    width:150
-  },
+      {name:"Standard Table 2", price: 750, img:"Luxury/Table/luxury_table2.png",
+        flippedImg: "Luxury/Table/luxury_table2-f.png",
+        rearImg:"Luxury/Table/luxury_table2.png",
+        rearImgF:"Luxury/Table/luxury_table2-f.png",
+        width: 200
+      },
 
-  {name:"Luxury Lighting 3", price:500, img:"luxury_lighting3.png",
-    flippedImg: "luxury_lighting3.png",
-    rearImg: "luxury_lighting3.png",
-    rearImgF: "luxury_lighting3.png",
-    width:200
-  }
-]
+      {name:"Standard Table 3", price: 750, img:"Luxury/Table/luxury_table3.png",
+        flippedImg: "Luxury/Table/luxury_table3-f.png",
+        rearImg:"Luxury/Table/luxury_table3.png",
+        rearImgF:"Luxury/Table/luxury_table3-f.png",
+        width: 200
+      },      
+    ]
 
   },
 
@@ -302,27 +302,27 @@ Luxury: [
 
     ],
 
-    Luxury: [
-      {name:"Luxury Lighting 1", price:500, img:"luxury_lighting1.png",
-      flippedImg: "luxury_lighting1-f.png",
-      rearImg: "luxury_ighting1.png",
-      rearImgF: "luxury_lighting1-f.png",
-      width:150
-      },
-      {name:"Luxury Lighting 2", price:500, img:"luxury_lighting2.png",
-      flippedImg: "luxury_lighting2.png",
-      rearImg: "luxury_lighting2.png",
-      rearImgF: "luxuryl_ighting2.png",
-      width:150
-      },
+Luxury: [
+  {name:"Luxury Lighting 1", price:500, img:"luxury_lighting1.png",
+    flippedImg: "luxury_lighting1-f.png",
+    rearImg: "luxury_lighting1.png",
+    rearImgF: "luxury_lighting1-f.png",
+    width:150
+  },
+  {name:"Luxury Lighting 2", price:500, img:"luxury_lighting2.png",
+    flippedImg: "luxury_lighting2.png",
+    rearImg: "luxury_lighting2.png",
+    rearImgF: "luxury_lighting2.png",
+    width:150
+  },
 
-      {name:"Luxury Lighting 3", price:500, img:"luxury_lighting3.png",
-      flippedImg: "luxury_lighting3.png",
-      rearImg: "luxury_lighting3.png",
-      rearImgF: "luxury_lighting3.png",
-      width:150
-      }
-    ]
+  {name:"Luxury Lighting 3", price:500, img:"luxury_lighting3.png",
+    flippedImg: "luxury_lighting3.png",
+    rearImg: "luxury_lighting3.png",
+    rearImgF: "luxury_lighting3.png",
+    width:200
+  }
+]
   },
 
   rugs: {
