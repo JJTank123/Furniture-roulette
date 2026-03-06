@@ -603,7 +603,7 @@ Luxury: [
 
     const imgElem = document.createElement('img');
     imgElem.src = item.img;
-    imgElem.id = item.name
+imgElem.id = item.name.replaceAll(" ", "_");
     imgElem.dataset.type = type;
     imgElem.style.width = item.width + "px";
 
