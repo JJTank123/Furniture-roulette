@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
         rearImg:"Standard_table3.png",
         rearImgF:"Standard_table3-f.png",
         width: 200
-      },
+      }
     ],
     Luxury: [
       {name:"Standard Table 1", price: 750, img:"luxury_table1.png",
