@@ -428,13 +428,13 @@ Luxury: [
         width:250
       },
       {name: "Standard Painting 2", price: 180, img: "Standard_painting2.png",
-        flippedImg:"Standard_paintings2-f.png",
+        flippedImg:"Standard_painting2-f.png",
         rearImg: "Standard_painting2.png",
         rearImgF: "Standard_painting2-f.png",
         width:100
       },
       {name: "Standard Painting 3", price: 180, img: "Standard_painting3.png",
-        flippedImg:"Standard_paintings3-f.png",
+        flippedImg:"Standard_painting3-f.png",
         rearImg: "Standard_painting3.png",
         rearImgF: "Standard_painting3-f.png",
         width:125
