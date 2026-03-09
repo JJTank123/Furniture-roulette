@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
         width: 200
       },
 
-      {name:"Standard Entertainment System 2", price:650, img: "Standard_entertainment3.png",
+      {name:"Standard Entertainment System 3", price:650, img: "Standard_entertainment3.png",
         flippedImg: "Standard_entertainment3-f.png",
         rearImg: "Standard_entertainment3.png",
         rearImgF: "Standard_entertainment3-f.png",
